@@ -1,0 +1,26 @@
+//
+//  FRProfileFriendCollectionCell.h
+//  Friendly
+//
+//  Created by Sergey Borichev on 31.03.16.
+//  Copyright © 2016 TecSynt. All rights reserved.
+//
+
+@class FRMutualFriend;
+
+
+#import "FREventModel.h"
+
+@interface FRProfileFriendCollectionCell : UICollectionViewCell
+
+<<<<<<< HEAD
+- (void)updateWithModel:(FRMutualFriend*)model;
+=======
+@property (nonatomic, strong) UILabel* nameLabel;
+@property (nonatomic, strong) UIImageView* image;
+@property (nonatomic, strong) UIImageView* faceBookLogoImage;
+
+- (void)updateWithModel:(FRJoinUser*)model;
+>>>>>>> sergey_branch
+
+@end

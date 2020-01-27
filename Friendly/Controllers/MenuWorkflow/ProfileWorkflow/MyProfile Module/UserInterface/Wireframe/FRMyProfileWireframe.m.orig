@@ -1,0 +1,175 @@
+//
+//  FRMyProfileInteractor.h
+//  Friendly
+//
+//  Created by Sergey Borichev on 17.03.2016.
+//  Copyright (c) 2016 TecSynt. All rights reserved.
+//
+
+#import "FRMyProfileWireframe.h"
+#import "FRMyProfileInteractor.h"
+#import "FRMyProfileVC.h"
+#import "FRMyProfilePresenter.h"
+#import "FRUserModel.h"
+#import "FREditProfileWireframe.h"
+#import "FRSettingWireframe.h"
+#import "FRMyProfileStatusInput.h"
+#import "FRFriendRequestsWireframe.h"
+#import "InstagramSimpleOAuthViewController.h"
+#import "InstagramLoginResponse.h"
+#import "FRUserManager.h"
+#import "FRSocialTransport.h"
+#import "FRInstagramPhotoPreviewController.h"
+#import "FRUserProfileWireframe.h"
+#import "FRSettingsTransport.h"
+#import "FRMyEventsGuestViewController.h"
+#import "FRTransitionAnimator.h"
+
+@interface FRMyProfileWireframe ()
+
+@property (nonatomic, weak) FRMyProfilePresenter* presenter;
+@property (nonatomic, weak) UINavigationController* presentedController;
+
+@property (nonatomic, assign) BOOL isNavBarHide;
+@end
+
+@implementation FRMyProfileWireframe
+
+- (void)presentMyProfileControllerFromNavigationController:(UINavigationController*)nc withBackButton:(BOOL)isBackButtonPresenting
+{
+    self.isNavBarHide = nc.navigationBarHidden;
+    FRMyProfileVC* myProfileController = [FRMyProfileVC new];
+    myProfileController.backButton.hidden = !isBackButtonPresenting;
+    FRMyProfileInteractor* interactor = [FRMyProfileInteractor new];
+    FRMyProfilePresenter* presenter = [FRMyProfilePresenter new];
+    
+    interactor.output = presenter;
+    
+    myProfileController.eventHandler = presenter;
+    
+    presenter.interactor = interactor;
+    presenter.wireframe = self;
+    [presenter configurePresenterWithUserInterface:myProfileController];
+    
+    BSDispatchBlockToMainQueue(^{
+        nc.navigationBarHidden = YES;
+        
+        if (isBackButtonPresenting)
+        {
+            [[FRTransitionAnimator new] presentViewController:myProfileController from:nc];
+
+        }
+        else
+        {
+            [nc pushViewController:myProfileController animated:NO];
+        }
+//        [nc presentViewController:myProfileController animated:YES completion:nil];
+    });
+    
+    self.presenter = presenter;
+    self.presentedController = nc;
+    self.myProfileController = myProfileController;
+}
+
+- (void)dismissMyProfileController
+{
+    
+    
+    self.presentedController.navigationBarHidden = self.isNavBarHide;
+//    [self.presentedController popViewControllerAnimated:YES];
+    
+    if ([[self.presentedController.viewControllers lastObject] isKindOfClass:[FRMyEventsGuestViewController class]])
+    {
+        UIViewController* temp = self.presentedController;
+        [[FRTransitionAnimator new] dismissViewController:temp from:self.myProfileController];
+    }
+    else
+    {
+        UIViewController* temp = [UIApplication sharedApplication].keyWindow.rootViewController;
+        [[FRTransitionAnimator new] dismissViewController:temp from:self.myProfileController];
+    }
+
+}
+
+- (void)presentSettingController
+{
+    [[FRSettingWireframe new] presentSettingControllerFromController:self.myProfileController];
+}
+
+- (void)presentEditProfile:(UserEntity*)profile
+{
+    [[FREditProfileWireframe new] presentEditProfileControllerFromNavigationController:self.presentedController userModel:profile];
+}
+
+- (void)presentStatusInputController
+{
+    FRMyProfileStatusInput* inputVC = [FRMyProfileStatusInput new];
+    inputVC.delegate = (id<FRMyProfileStatusInputDelegate>)self.presenter;
+    [self.myProfileController presentViewController:inputVC animated:YES completion:nil];
+}
+
+- (void)presentInstagramAuthController
+{
+    //        NSHTTPCookieStorage *storage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+    //        [[storage cookies] enumerateObjectsUsingBlock:^(NSHTTPCookie *cookie, NSUInteger idx, BOOL *stop) {
+    //            [storage deleteCookie:cookie];
+    //        }];
+    
+    InstagramSimpleOAuthViewController *viewController = [[InstagramSimpleOAuthViewController alloc] initWithClientID:kClientID                                                                                clientSecret:@"08059f58d05349d8ad102f4ea8c0ef23"
+                                                                                                          callbackURL:[NSURL URLWithString:@"http://google.com"]
+                                                                                                           completion:^(InstagramLoginResponse *response, NSError *error) {
+                                                                                                               NSLog(@"My Access Token is:  %@", response.accessToken);
+                                                                                                               [FRUserManager sharedInstance].instaToken = response.accessToken;
+                                                                                                               [[NSUserDefaults standardUserDefaults] setObject:response.accessToken forKey:@"instaToken"];
+                                                                                                               [FRSocialTransport signInWithInstagram:[FRUserManager sharedInstance].instaToken                                   success:^(NSArray *images) {
+                                                                                                                   //
+                                                                                                               } failure:^(NSError *error) {
+                                                                                                                   //
+                                                                                                               }];
+                                       }];
+    
+    [self.presentedController pushViewController:viewController
+                                        animated:YES];
+}
+
+-(void)presentPreviewControllerWithImage:(UIImage*)image
+{
+    FRInstagramPhotoPreviewController* vc = [FRInstagramPhotoPreviewController new];
+    [vc updateWithPhoto:image];
+    [self.myProfileController presentViewController:vc animated:YES completion:nil];
+}
+
+- (void)showUserProfile:(NSString*)userId
+{
+<<<<<<< HEAD
+    UserEntity* user = [FRSettingsTransport getUserWithId:userId success:^(FRUserModel *userProfile, NSArray *mutualFriends) {
+        //
+    } failure:^(NSError *error) {
+        //
+    }];
+    FRUserProfileWireframe* uWF = [FRUserProfileWireframe new];
+    [uWF presentUserProfileControllerFromNavigationController:self.presentedController user:user withAnimation:NO];
+=======
+//    UserEntity* user = [FRSettingsTransport getUserWithId:userId success:^(FRUserModel *userProfile, NSArray *mutualFriends) {
+//        //
+//    } failure:^(NSError *error) {
+//        //
+//    }];
+//    FRUserProfileWireframe* uWF = [FRUserProfileWireframe new];
+//    [uWF presentUserProfileControllerFromNavigationController:self.presentedController user:user];
+>>>>>>> Mastet_temp
+
+}
+
+-(void)showUserProfileWithEntity:(UserEntity*)user
+{
+<<<<<<< HEAD
+    FRUserProfileWireframe* uWF = [FRUserProfileWireframe new];
+    [uWF presentUserProfileControllerFromNavigationController:self.presentedController user:user withAnimation:NO];
+=======
+//    FRUserProfileWireframe* uWF = [FRUserProfileWireframe new];
+//    [uWF presentUserProfileControllerFromNavigationController:self.presentedController user:user];
+>>>>>>> Mastet_temp
+}
+
+@end

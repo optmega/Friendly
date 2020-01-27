@@ -1,0 +1,6 @@
+framework module MSSPopMasonry {
+  umbrella header "MSSPopMasonry-umbrella.h"
+
+  export *
+  module * { export * }
+}

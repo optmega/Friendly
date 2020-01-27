@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11542" systemVersion="16B2657" minimumToolsVersion="Xcode 7.0" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="CreateEvent" representedClassName="CreateEvent" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="age_max" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="age_min" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="category_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="creator_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="date_" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="event_start" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="eventId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gender" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="image_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="info" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="inviteUsersId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isFeatured" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="isUpdate" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="lat" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="locationName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lon" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="open_to_fb_friends" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="partner_hosting" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="placeImage" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="requests" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="show_number" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="slots" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="thumbnail_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="time_" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="CurrentUser" representedClassName="CurrentUser" parentEntity="UserEntity" syncable="YES">
+        <attribute name="allFriendsCount" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="availableToMeetUsersCount" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="friends" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="UserEntity" inverseName="currentUser" inverseEntity="UserEntity" syncable="YES"/>
+        <relationship name="hostingEvents" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FREvent" syncable="YES"/>
+        <relationship name="joingEvents" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FREvent" syncable="YES"/>
+        <relationship name="setting" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Setting" inverseName="user" inverseEntity="Setting" syncable="YES"/>
+    </entity>
+    <entity name="Filter" representedClassName="Filter" syncable="YES">
+        <attribute name="ageMax" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="ageMin" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="distance" optional="YES" attributeType="Integer 16" defaultValueString="0.0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="gender" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lan" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="lot" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="placeName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sortByDate" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserEntity" inverseName="filter" inverseEntity="UserEntity" syncable="YES"/>
+    </entity>
+    <entity name="FRBaseMessage" representedClassName="FRBaseMessage" isAbstract="YES" syncable="YES">
+        <attribute name="createDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="creatorId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="messageId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="messageStatus" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="messageText" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="messageType" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="opponentId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tempId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userPhoto" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="FRBaseRoom" representedClassName="FRBaseRoom" syncable="YES">
+        <attribute name="currentUserId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isGroupChat" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="isNewMessage" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="lastActivityAt" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="lastMessage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastMessageDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="roomTitle" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="FREvent" representedClassName="FREvent" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ageMax" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="ageMin" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="categoryId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="categoryType" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="createdAt" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="creator_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="date_" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="event_start" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="eventId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="eventType" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="gender" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="imageUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="info" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isDelete" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="isFeatured" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="isJoining" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="isPopular" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="joinedAt" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="lat" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="lon" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="openToFBFriends" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="partnerHosting" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="partnerIsAccepted" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="requestStatus" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="showNumber" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="slots" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="tag" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="thumbnail_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="time_" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="way" optional="YES" attributeType="Integer 64" defaultValueString="0.0" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="creator" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserEntity" syncable="YES"/>
+        <relationship name="groupRoom" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="FRGroupRoom" inverseName="event" inverseEntity="FRGroupRoom" syncable="YES"/>
+        <relationship name="memberUsers" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="MemberUser" inverseName="event" inverseEntity="MemberUser" syncable="YES"/>
+        <relationship name="partnerUser" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MemberUser" syncable="YES"/>
+        <relationship name="userRequest" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="UserRequest" inverseName="event" inverseEntity="UserRequest" syncable="YES"/>
+    </entity>
+    <entity name="FRGroupMessage" representedClassName="FRGroupMessage" parentEntity="FRBaseMessage" syncable="YES">
+        <attribute name="eventId" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="room" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="FRGroupRoom" inverseName="messages" inverseEntity="FRGroupRoom" syncable="YES"/>
+    </entity>
+    <entity name="FRGroupRoom" representedClassName="FRGroupRoom" parentEntity="FRBaseRoom" syncable="YES">
+        <attribute name="eventDate" optional="YES" attributeType="Date" defaultDateTimeInterval="486835440" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="eventId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="eventName" optional="YES" attributeType="String" defaultValueString="Event" syncable="YES"/>
+        <attribute name="joined_at" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="lastUserPhoto" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="event" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="FREvent" inverseName="groupRoom" inverseEntity="FREvent" syncable="YES"/>
+        <relationship name="members" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FRMemberUser" syncable="YES"/>
+        <relationship name="messages" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FRGroupMessage" inverseName="room" inverseEntity="FRGroupMessage" syncable="YES"/>
+    </entity>
+    <entity name="FRMemberUser" representedClassName="FRMemberUser" syncable="YES">
+        <attribute name="friendFacebook" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="photo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userId" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="FRPrivateMessage" representedClassName="FRPrivateMessage" parentEntity="FRBaseMessage" syncable="YES">
+        <attribute name="roomId" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="room" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FRPrivateRoom" inverseName="messages" inverseEntity="FRPrivateRoom" syncable="YES"/>
+    </entity>
+    <entity name="FRPrivateRoom" representedClassName="FRPrivateRoom" parentEntity="FRBaseRoom" syncable="YES">
+        <attribute name="opponentBirthday" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="opponentId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="opponentName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="roomId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="roomImage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userId" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="messages" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="FRPrivateMessage" inverseName="room" inverseEntity="FRPrivateMessage" syncable="YES"/>
+        <relationship name="opponent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserEntity" inverseName="privateRooms" inverseEntity="UserEntity" syncable="YES"/>
+    </entity>
+    <entity name="InstagramImage" representedClassName="InstagramImage" syncable="YES">
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="UserEntity" inverseName="images" inverseEntity="UserEntity" syncable="YES"/>
+    </entity>
+    <entity name="Interest" representedClassName="Interest" syncable="YES">
+        <attribute name="createdAt" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="interestId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isMutual" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserEntity" inverseName="interests" inverseEntity="UserEntity" syncable="YES"/>
+    </entity>
+    <entity name="Invite" representedClassName="Invite" syncable="YES">
+        <attribute name="referralId" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="MemberUser" representedClassName="MemberUser" syncable="YES">
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="photo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userId" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="event" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="FREvent" inverseName="memberUsers" inverseEntity="FREvent" syncable="YES"/>
+    </entity>
+    <entity name="MutualUser" representedClassName="MutualUser" syncable="YES">
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="photo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="thumbnail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userId" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserEntity" inverseName="mutualFriend" inverseEntity="UserEntity" syncable="YES"/>
+    </entity>
+    <entity name="Setting" representedClassName="Setting" syncable="YES">
+        <attribute name="eventInvites" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="eventRequests" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="friendRequests" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="groupMessagesNotification" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="privateAccount" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CurrentUser" inverseName="setting" inverseEntity="CurrentUser" syncable="YES"/>
+    </entity>
+    <entity name="UserEntity" representedClassName="UserEntity" syncable="YES">
+        <attribute name="apnsToken" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="availableStatus" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="birthday" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="coverImage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createdAt" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="eventIntites" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="eventRequests" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="facebookId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="filterLat" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="filterLon" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="filterPlaceName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="filterSortByDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="firlterDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="friendRequests" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="friends_since" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="gender" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="groupChatMessage" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="instagram_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="instagramMediaCount" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="instagramUsername" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isFriend" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="isSuspended" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="jobTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastActive" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mobileNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="notificationSteps" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="notifiedAboutMe" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="privateAccount" optional="YES" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="systemStatus" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="updateAt" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="user_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userInfo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userPhoto" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userThumbnailPhoto" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userType" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="wallPhoto" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="way" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="whyAreYouHere" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="yourBio" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="currentUser" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CurrentUser" inverseName="friends" inverseEntity="CurrentUser" syncable="YES"/>
+        <relationship name="filter" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Filter" inverseName="user" inverseEntity="Filter" syncable="YES"/>
+        <relationship name="images" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="InstagramImage" inverseName="user" inverseEntity="InstagramImage" syncable="YES"/>
+        <relationship name="interests" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Interest" inverseName="user" inverseEntity="Interest" syncable="YES"/>
+        <relationship name="mutualFriend" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MutualUser" inverseName="user" inverseEntity="MutualUser" syncable="YES"/>
+        <relationship name="privateRooms" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FRPrivateRoom" inverseName="opponent" inverseEntity="FRPrivateRoom" syncable="YES"/>
+    </entity>
+    <entity name="UserRequest" representedClassName="UserRequest" syncable="YES">
+        <attribute name="birthday" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="createdAt" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="photo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="requestId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="requestMessage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="way" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="event" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FREvent" inverseName="userRequest" inverseEntity="FREvent" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="CreateEvent" positionX="-981" positionY="-153" width="128" height="450"/>
+        <element name="CurrentUser" positionX="-936" positionY="-108" width="128" height="135"/>
+        <element name="Filter" positionX="-981" positionY="-153" width="128" height="195"/>
+        <element name="FRBaseMessage" positionX="-776" positionY="-156" width="128" height="210"/>
+        <element name="FRBaseRoom" positionX="-981" positionY="-153" width="128" height="150"/>
+        <element name="FREvent" positionX="-1044" positionY="-135" width="128" height="615"/>
+        <element name="FRGroupMessage" positionX="-776" positionY="81" width="128" height="75"/>
+        <element name="FRGroupRoom" positionX="-965" positionY="18" width="128" height="165"/>
+        <element name="FRMemberUser" positionX="-1181" positionY="54" width="128" height="105"/>
+        <element name="FRPrivateMessage" positionX="-776" positionY="-306" width="128" height="73"/>
+        <element name="FRPrivateRoom" positionX="-999" positionY="-234" width="128" height="165"/>
+        <element name="InstagramImage" positionX="-954" positionY="-126" width="128" height="75"/>
+        <element name="Interest" positionX="-972" positionY="-144" width="128" height="120"/>
+        <element name="Invite" positionX="-972" positionY="-144" width="128" height="60"/>
+        <element name="MemberUser" positionX="-972" positionY="-144" width="128" height="105"/>
+        <element name="MutualUser" positionX="-963" positionY="-135" width="128" height="120"/>
+        <element name="Setting" positionX="-981" positionY="-153" width="128" height="150"/>
+        <element name="UserEntity" positionX="-981" positionY="-153" width="128" height="765"/>
+        <element name="UserRequest" positionX="-963" positionY="-135" width="128" height="180"/>
+    </elements>
+</model>

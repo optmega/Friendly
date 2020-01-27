@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ProximaNovaSoft-Regular.otf">
+            <string>ProximaNovaSoft-Regular</string>
+        </array>
+        <array key="ProximaNovaSoft-Semibold.otf">
+            <string>ProximaNovaSoft-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="269" id="F1d-bI-8aI" customClass="FRHomeEmptyNearbyCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="269"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="F1d-bI-8aI" id="6eH-wn-Uub">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="268"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add your friends and get things started in your area by hosting an event" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J1T-sJ-uUo">
+                        <rect key="frame" x="46" y="119" width="228" height="30"/>
+                        <fontDescription key="fontDescription" name="ProximaNovaSoft-Regular" family="Proxima Nova Soft" pointSize="15"/>
+                        <color key="textColor" red="0.61176470588235299" green="0.62745098039215685" blue="0.6705882352941176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There's no nearby events" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hdd-Te-Pmy">
+                        <rect key="frame" x="53" y="90" width="214" height="19"/>
+                        <fontDescription key="fontDescription" name="ProximaNovaSoft-Semibold" family="Proxima Nova Soft" pointSize="19"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="💩" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3I8-4m-r1O">
+                        <rect key="frame" x="144" y="43" width="32" height="39"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zrC-GX-oin">
+                        <rect key="frame" x="96" y="168" width="129" height="34"/>
+                        <color key="backgroundColor" red="0.30980392156862746" green="0.086274509803921567" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="34" id="Xaw-UF-WVb"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="ProximaNovaSoft-Regular" family="Proxima Nova Soft" pointSize="17"/>
+                        <state key="normal" title="    Add friends    "/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="4"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="J1T-sJ-uUo" firstAttribute="leading" secondItem="6eH-wn-Uub" secondAttribute="leadingMargin" constant="38" id="3ha-aH-Pgg"/>
+                    <constraint firstItem="3I8-4m-r1O" firstAttribute="centerX" secondItem="6eH-wn-Uub" secondAttribute="centerX" id="FvW-cp-MEt"/>
+                    <constraint firstItem="Hdd-Te-Pmy" firstAttribute="top" secondItem="3I8-4m-r1O" secondAttribute="bottom" constant="9" id="Urq-Qz-pLZ"/>
+                    <constraint firstItem="J1T-sJ-uUo" firstAttribute="centerX" secondItem="6eH-wn-Uub" secondAttribute="centerX" id="Vte-pB-jFX"/>
+                    <constraint firstItem="Hdd-Te-Pmy" firstAttribute="centerX" secondItem="6eH-wn-Uub" secondAttribute="centerX" id="WZZ-qx-ef9"/>
+                    <constraint firstItem="J1T-sJ-uUo" firstAttribute="centerY" secondItem="6eH-wn-Uub" secondAttribute="centerY" id="Wt6-3v-xv2"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="J1T-sJ-uUo" secondAttribute="trailing" constant="38" id="nFI-wm-3Li"/>
+                    <constraint firstItem="J1T-sJ-uUo" firstAttribute="top" secondItem="Hdd-Te-Pmy" secondAttribute="bottom" constant="10" id="oqy-OY-GT6"/>
+                    <constraint firstItem="zrC-GX-oin" firstAttribute="centerX" secondItem="6eH-wn-Uub" secondAttribute="centerX" id="rag-wR-5NR"/>
+                    <constraint firstItem="zrC-GX-oin" firstAttribute="top" secondItem="J1T-sJ-uUo" secondAttribute="bottom" constant="18" id="xkO-jY-zRx"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="addFriends" destination="zrC-GX-oin" id="kr3-oL-lNC"/>
+                <outlet property="title" destination="J1T-sJ-uUo" id="dcH-Oy-OWT"/>
+            </connections>
+            <point key="canvasLocation" x="236" y="268.5"/>
+        </tableViewCell>
+    </objects>
+</document>

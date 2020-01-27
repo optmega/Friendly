@@ -1,0 +1,89 @@
+/* 
+  Localizable.strings
+  Friendly
+
+  Created by Sergey Borichev on 26.02.16.
+  Copyright © 2016 TecSynt. All rights reserved.
+*/
+
+"hud.lable-title.loading" = "Loading...";
+"common.ok" = "OK";
+
+"debug.vc.title" = "Debug";
+
+"intro.vc.loginButton.title" = "Log in with Facebook";
+
+"intro.vc.privacyButton.title" = "We will never publish without consent";
+
+"intro.vc.privacyTextView" = "Friendly never published anything on your \n Facebook wall without confirmed consent. \n\n The app uses geolocation but your position will \n never be visible to other users. \n\n If you rather your profile not become discoverable you may make your profile private.";
+
+"complete.vc.letsButton.title" = "Let's go!";
+
+"complete.vc.descriptionTextView.text" = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+
+"interests.vc.titleTopBarLabel.title" =  "WHAT ARE YOUR INTERESTS";
+
+"interests.vc.descriptionLabel.text" = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
+
+"interests.vc.addTagTextField.placeholder.text" = "Add your own tags";
+
+"interests.vc.toolBarButton.title" = "Continue";
+
+"interests.vc.toolBarLabel.text" =  "Step 1 of 3";
+
+"interests.vc.tableview.titleForeHeader" =  "RECOMENDED TAGS";
+
+"recomended.vc.titleTopBarLabel.title" = "RECOMENDED USERS";
+
+"recomended.vc.descriptionLabel.text" = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
+
+"recomended.vc.toolBarButton.title" = "Continue";
+
+"recomended.vc.tolBarSkipButton.title" = "Skip";
+
+"recomended.vc.toolBarLabel.text" = "Step 2 of 3";
+
+"recomended.vc.tableView.titleForHeader" =  "RECOMENDED USERS";
+
+"profilePolish.vc.titleTopBarLabel.text" = "PROFILE POLISH";
+
+"profilePolish.vc.descriptionLabel.text" = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
+
+"profilePolish.vc.toolBarButton.title" = "Finish";
+
+"profilePolish.vc.toolBarLabel.text" = "Step 3 of 3";
+
+"profilePolish.vc.profilePictureLabel.text" = "Profile picture";
+
+"profilePolish.vc.changePhotoButton.title" = "Change";
+
+"recomended.customcell.addButton.title" = "Add";
+
+"Share location" = "Share location";
+"Done" = "Done";
+
+"Guys & girls" = "Guys & girls";
+"Girls only" = "Girls only";
+"ADD 3 OR MORE INTERESTS" = "ADD 3 OR MORE INTERESTS";
+"    Save    " = "    Save    ";
+"Upload" = "Upload";
+"Change" = "Change";
+"Selected wrong range" = "Selected wrong range";
+"Please select minimum 5 year gap." = "Please select minimum 5 year gap.";
+"Create event"= "Create event";
+"What are you hosting?" = "What are you hosting?";
+"Description..."="Description...";
+"Gender"="Gender";
+"Age's" = "Age's";
+"All"="All";
+"Open slots"="Open slots";
+"Category"="Category";
+"Invite friends"="Invite friends";
+"Location"="Location";
+"Date"="Date";
+"Time"="Time";
+"Show number"="Show number";
+"What are you hosting?"="What are you hosting?";
+"Select a date"="Select a date";
+"Event Information"="Event Information";
+"Events can only be planned two weeks in advance"="Events can only be planned two weeks in advance";

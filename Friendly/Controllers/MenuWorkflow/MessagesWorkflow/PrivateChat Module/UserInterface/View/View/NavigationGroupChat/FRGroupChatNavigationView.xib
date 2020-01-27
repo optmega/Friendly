@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="SWN-3A-WuT" customClass="FRGroupChatNavigationView">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="63"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7cr-lB-XOr">
+                    <rect key="frame" x="0.0" y="19" width="44" height="44"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="Rpc-pE-Qi8"/>
+                        <constraint firstAttribute="height" constant="44" id="ar2-Yx-KKa"/>
+                    </constraints>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xd-nK-db7">
+                    <rect key="frame" x="52" y="45" width="496" height="14.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.52549019607843139" green="0.54117647058823526" blue="0.58823529411764708" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RHB-p8-EOS">
+                    <rect key="frame" x="52" y="22" width="496" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.11372549019607843" green="0.15294117647058825" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3hT-mI-2Eb">
+                    <rect key="frame" x="46" y="22" width="508" height="40.5"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40.5" id="ReB-Ue-ef2"/>
+                    </constraints>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YHg-4y-ejL">
+                    <rect key="frame" x="25" y="62" width="550" height="1"/>
+                    <color key="backgroundColor" red="0.8784313725490196" green="0.88235294117647056" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="3Bw-VJ-FiE"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pjs-IB-EWQ">
+                    <rect key="frame" x="556" y="19" width="44" height="44"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="b5h-O5-i9W"/>
+                        <constraint firstAttribute="width" constant="44" id="q5u-Qm-Ayh"/>
+                    </constraints>
+                    <inset key="contentEdgeInsets" minX="-5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="YHg-4y-ejL" secondAttribute="trailing" constant="25" id="0Cb-NU-k00"/>
+                <constraint firstAttribute="trailing" secondItem="Pjs-IB-EWQ" secondAttribute="trailing" id="6Nw-36-zkQ"/>
+                <constraint firstAttribute="bottom" secondItem="Pjs-IB-EWQ" secondAttribute="bottom" id="6Uq-a0-BYF"/>
+                <constraint firstAttribute="bottom" secondItem="3hT-mI-2Eb" secondAttribute="bottom" id="H0q-2y-M9f"/>
+                <constraint firstAttribute="bottom" secondItem="7cr-lB-XOr" secondAttribute="bottom" id="LsR-iJ-nxe"/>
+                <constraint firstItem="Pjs-IB-EWQ" firstAttribute="leading" secondItem="4xd-nK-db7" secondAttribute="trailing" constant="8" id="MYR-PT-F58"/>
+                <constraint firstItem="RHB-p8-EOS" firstAttribute="leading" secondItem="7cr-lB-XOr" secondAttribute="trailing" constant="8" id="PPo-Ty-zwP"/>
+                <constraint firstAttribute="bottom" secondItem="YHg-4y-ejL" secondAttribute="bottom" id="XUf-HD-1gf"/>
+                <constraint firstItem="Pjs-IB-EWQ" firstAttribute="leading" secondItem="RHB-p8-EOS" secondAttribute="trailing" constant="8" id="Xkm-eY-VEO"/>
+                <constraint firstAttribute="bottom" secondItem="4xd-nK-db7" secondAttribute="bottom" constant="3.5" id="ZC4-s7-L7M"/>
+                <constraint firstItem="4xd-nK-db7" firstAttribute="leading" secondItem="7cr-lB-XOr" secondAttribute="trailing" constant="8" id="bak-Ij-5NO"/>
+                <constraint firstItem="3hT-mI-2Eb" firstAttribute="leading" secondItem="7cr-lB-XOr" secondAttribute="trailing" constant="2" id="ev4-z9-0Kj"/>
+                <constraint firstItem="Pjs-IB-EWQ" firstAttribute="leading" secondItem="3hT-mI-2Eb" secondAttribute="trailing" constant="2" id="gc5-kV-dcH"/>
+                <constraint firstItem="4xd-nK-db7" firstAttribute="top" secondItem="RHB-p8-EOS" secondAttribute="bottom" constant="2" id="jCq-QH-PgV"/>
+                <constraint firstItem="7cr-lB-XOr" firstAttribute="leading" secondItem="SWN-3A-WuT" secondAttribute="leading" id="ufB-sg-w8j"/>
+                <constraint firstItem="YHg-4y-ejL" firstAttribute="leading" secondItem="SWN-3A-WuT" secondAttribute="leading" constant="25" id="vxR-Ft-ds1"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="centerItem" destination="3hT-mI-2Eb" id="BDK-hh-hbA"/>
+                <outlet property="leftItem" destination="7cr-lB-XOr" id="crG-en-Yrg"/>
+                <outlet property="rightItem" destination="Pjs-IB-EWQ" id="9lk-PP-MXj"/>
+                <outlet property="separator" destination="YHg-4y-ejL" id="fRQ-Yt-JTl"/>
+                <outlet property="subtitleLabel" destination="4xd-nK-db7" id="ZNm-vO-2v0"/>
+                <outlet property="titleLabel" destination="RHB-p8-EOS" id="zHm-oA-i9W"/>
+            </connections>
+            <point key="canvasLocation" x="82" y="12.5"/>
+        </view>
+    </objects>
+</document>

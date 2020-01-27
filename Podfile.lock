@@ -1,0 +1,311 @@
+PODS:
+  - AFNetworking (2.6.3):
+    - AFNetworking/NSURLConnection (= 2.6.3)
+    - AFNetworking/NSURLSession (= 2.6.3)
+    - AFNetworking/Reachability (= 2.6.3)
+    - AFNetworking/Security (= 2.6.3)
+    - AFNetworking/Serialization (= 2.6.3)
+    - AFNetworking/UIKit (= 2.6.3)
+  - AFNetworking-RACExtensions (0.1.3):
+    - AFNetworking (~> 2.0)
+    - ReactiveCocoa (~> 2.0)
+  - AFNetworking/NSURLConnection (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.6.3)
+  - AFNetworking/Security (2.6.3)
+  - AFNetworking/Serialization (2.6.3)
+  - AFNetworking/UIKit (2.6.3):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - APAddressBook (0.2.3):
+    - APAddressBook/Core (= 0.2.3)
+  - APAddressBook/Core (0.2.3)
+  - AWSAutoScaling (2.4.11):
+    - AWSCore (= 2.4.11)
+  - AWSCloudWatch (2.4.11):
+    - AWSCore (= 2.4.11)
+  - AWSCore (2.4.11)
+  - AWSDynamoDB (2.4.11):
+    - AWSCore (= 2.4.11)
+  - AWSEC2 (2.4.11):
+    - AWSCore (= 2.4.11)
+  - AWSElasticLoadBalancing (2.4.11):
+    - AWSCore (= 2.4.11)
+  - AWSiOSSDKv2 (2.4.11):
+    - AWSiOSSDKv2/AutoScaling (= 2.4.11)
+    - AWSiOSSDKv2/AWSCore (= 2.4.11)
+    - AWSiOSSDKv2/CloudWatch (= 2.4.11)
+    - AWSiOSSDKv2/DynamoDB (= 2.4.11)
+    - AWSiOSSDKv2/EC2 (= 2.4.11)
+    - AWSiOSSDKv2/ElasticLoadBalancing (= 2.4.11)
+    - AWSiOSSDKv2/Kinesis (= 2.4.11)
+    - AWSiOSSDKv2/MobileAnalytics (= 2.4.11)
+    - AWSiOSSDKv2/S3 (= 2.4.11)
+    - AWSiOSSDKv2/SES (= 2.4.11)
+    - AWSiOSSDKv2/SimpleDB (= 2.4.11)
+    - AWSiOSSDKv2/SNS (= 2.4.11)
+    - AWSiOSSDKv2/SQS (= 2.4.11)
+  - AWSiOSSDKv2/AutoScaling (2.4.11):
+    - AWSAutoScaling (= 2.4.11)
+  - AWSiOSSDKv2/AWSCore (2.4.11):
+    - AWSCore (= 2.4.11)
+  - AWSiOSSDKv2/CloudWatch (2.4.11):
+    - AWSCloudWatch (= 2.4.11)
+  - AWSiOSSDKv2/DynamoDB (2.4.11):
+    - AWSDynamoDB (= 2.4.11)
+  - AWSiOSSDKv2/EC2 (2.4.11):
+    - AWSEC2 (= 2.4.11)
+  - AWSiOSSDKv2/ElasticLoadBalancing (2.4.11):
+    - AWSElasticLoadBalancing (= 2.4.11)
+  - AWSiOSSDKv2/Kinesis (2.4.11):
+    - AWSKinesis (= 2.4.11)
+  - AWSiOSSDKv2/MobileAnalytics (2.4.11):
+    - AWSMobileAnalytics (= 2.4.11)
+  - AWSiOSSDKv2/S3 (2.4.11):
+    - AWSS3 (= 2.4.11)
+  - AWSiOSSDKv2/SES (2.4.11):
+    - AWSSES (= 2.4.11)
+  - AWSiOSSDKv2/SimpleDB (2.4.11):
+    - AWSSimpleDB (= 2.4.11)
+  - AWSiOSSDKv2/SNS (2.4.11):
+    - AWSSNS (= 2.4.11)
+  - AWSiOSSDKv2/SQS (2.4.11):
+    - AWSSQS (= 2.4.11)
+  - AWSKinesis (2.4.11):
+    - AWSCore (= 2.4.11)
+  - AWSMobileAnalytics (2.4.11):
+    - AWSCore (= 2.4.11)
+  - AWSS3 (2.4.11):
+    - AWSCore (= 2.4.11)
+  - AWSSES (2.4.11):
+    - AWSCore (= 2.4.11)
+  - AWSSimpleDB (2.4.11):
+    - AWSCore (= 2.4.11)
+  - AWSSNS (2.4.11):
+    - AWSCore (= 2.4.11)
+  - AWSSQS (2.4.11):
+    - AWSCore (= 2.4.11)
+  - Bolts (1.8.4):
+    - Bolts/AppLinks (= 1.8.4)
+    - Bolts/Tasks (= 1.8.4)
+  - Bolts/AppLinks (1.8.4):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.8.4)
+  - BSHelper (0.1)
+  - CCBottomRefreshControl (0.5.1):
+    - Masonry (~> 0.6.2)
+  - CMDQueryStringSerialization (0.4.1):
+    - ISO8601
+  - CMPopTipView (2.3.0)
+  - DAKeyboardControl (2.4.0)
+  - EKKeyboardAvoiding (2.0)
+  - FBAudienceNetwork (4.17.0)
+  - FBSDKCoreKit (4.17.0):
+    - Bolts (~> 1.7)
+  - FBSDKLoginKit (4.17.0):
+    - FBSDKCoreKit
+  - FBSDKMessengerShareKit (1.3.2)
+  - FBSDKShareKit (4.17.0):
+    - FBSDKCoreKit
+  - FirebaseAnalytics (3.5.1):
+    - FirebaseCore (~> 3.4)
+    - FirebaseInstanceID (~> 1.0)
+    - GoogleInterchangeUtilities (~> 1.2)
+    - GoogleSymbolUtilities (~> 1.1)
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+  - FirebaseCore (3.4.4):
+    - GoogleInterchangeUtilities (~> 1.2)
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+  - FirebaseInstanceID (1.0.8)
+  - Google/Analytics (3.0.3):
+    - Google/Core
+    - GoogleAnalytics (~> 3.12)
+  - Google/Core (3.0.3):
+    - FirebaseAnalytics (~> 3.2)
+  - GoogleAnalytics (3.17.0)
+  - GoogleAPIClient/Calendar (1.0.5):
+    - GoogleAPIClient/Core
+    - GTMSessionFetcher (~> 1.1)
+  - GoogleAPIClient/Core (1.0.5):
+    - GTMSessionFetcher (~> 1.1)
+  - GoogleInterchangeUtilities (1.2.2):
+    - GoogleSymbolUtilities (~> 1.1)
+  - GoogleMaps (2.1.0):
+    - GoogleMaps/Maps (= 2.1.0)
+  - GoogleMaps/Base (2.1.0)
+  - GoogleMaps/Maps (2.1.0):
+    - GoogleMaps/Base (= 2.1.0)
+  - GooglePlaces (2.1.0):
+    - GoogleMaps/Base (= 2.1.0)
+  - GoogleSymbolUtilities (1.1.2)
+  - GoogleToolboxForMac/Defines (2.1.0)
+  - GoogleToolboxForMac/NSData+zlib (2.1.0):
+    - GoogleToolboxForMac/Defines (= 2.1.0)
+  - GTMOAuth2 (1.1.4):
+    - GTMSessionFetcher (~> 1.1)
+  - GTMSessionFetcher (1.1.7):
+    - GTMSessionFetcher/Full (= 1.1.7)
+  - GTMSessionFetcher/Core (1.1.7)
+  - GTMSessionFetcher/Full (1.1.7):
+    - GTMSessionFetcher/Core (= 1.1.7)
+  - InstagramSimpleOAuth (0.3.1):
+    - MBProgressHUD (~> 0.9)
+    - SimpleOAuth2 (= 0.0.3)
+  - ISO8601 (0.6.0)
+  - JSONModel (1.1.2)
+  - MagicalRecord (2.3.2):
+    - MagicalRecord/Core (= 2.3.2)
+  - MagicalRecord/Core (2.3.2)
+  - Masonry (0.6.4)
+  - MBProgressHUD (0.9.2)
+  - MSSPopMasonry (0.0.2):
+    - Masonry
+    - pop
+  - pop (1.0.9)
+  - RDVKeyboardAvoiding (1.1.0)
+  - ReactiveCocoa (2.5):
+    - ReactiveCocoa/UI (= 2.5)
+  - ReactiveCocoa/Core (2.5):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.5)
+  - ReactiveCocoa/UI (2.5):
+    - ReactiveCocoa/Core
+  - Reveal-iOS-SDK (1.6.2)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
+  - SimpleAuth/Core (0.3.9):
+    - CMDQueryStringSerialization
+    - ReactiveCocoa
+  - SimpleAuth/Instagram (0.3.9):
+    - SimpleAuth/Core
+  - SimpleOAuth2 (0.0.3):
+    - AFNetworking (~> 2.0)
+  - UITextView+Placeholder (1.2.0)
+  - YYCache (1.0.4)
+  - YYImage (1.0.4):
+    - YYImage/Core (= 1.0.4)
+  - YYImage/Core (1.0.4)
+  - YYWebImage (1.0.5):
+    - YYCache
+    - YYImage
+
+DEPENDENCIES:
+  - AFNetworking
+  - AFNetworking-RACExtensions (from `https://github.com/knshiro/AFNetworking-RACExtensions.git`)
+  - APAddressBook
+  - AWSiOSSDKv2
+  - BSHelper (from `https://github.com/iUserGit/BSHelper.git`)
+  - CCBottomRefreshControl
+  - CMPopTipView
+  - DAKeyboardControl
+  - EKKeyboardAvoiding
+  - FBAudienceNetwork
+  - FBSDKCoreKit
+  - FBSDKLoginKit
+  - FBSDKMessengerShareKit
+  - FBSDKShareKit
+  - Google/Analytics
+  - GoogleAPIClient/Calendar (~> 1.0.2)
+  - GoogleMaps
+  - GooglePlaces
+  - GTMOAuth2 (~> 1.1.0)
+  - InstagramSimpleOAuth
+  - JSONModel (~> 1.1.0)
+  - MagicalRecord
+  - Masonry
+  - MBProgressHUD
+  - MSSPopMasonry
+  - pop (~> 1.0)
+  - RDVKeyboardAvoiding
+  - Reveal-iOS-SDK (~> 1.6)
+  - SDWebImage
+  - SimpleAuth/Instagram
+  - UITextView+Placeholder
+  - YYWebImage
+
+EXTERNAL SOURCES:
+  AFNetworking-RACExtensions:
+    :git: https://github.com/knshiro/AFNetworking-RACExtensions.git
+  BSHelper:
+    :git: https://github.com/iUserGit/BSHelper.git
+
+CHECKOUT OPTIONS:
+  AFNetworking-RACExtensions:
+    :commit: d4c6097d3f22be212c66339f850b1be180162747
+    :git: https://github.com/knshiro/AFNetworking-RACExtensions.git
+  BSHelper:
+    :commit: 813309ff2bfa19efbcdcd6382767119a5d3ed6da
+    :git: https://github.com/iUserGit/BSHelper.git
+
+SPEC CHECKSUMS:
+  AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
+  AFNetworking-RACExtensions: b9b18c486fe4e257fb6c1ce6a848e82581af2170
+  APAddressBook: 2a91bf05999548bea210ec9d1a68073f4dc8bfce
+  AWSAutoScaling: 2c7a041a654c72b39951d3671bde3ddf9157715d
+  AWSCloudWatch: bbd93b490a16a297ab3fe31f8f5cd8e20e19d79a
+  AWSCore: e66b0f50d68f9897cc9e68471062f0cb5379eec5
+  AWSDynamoDB: 1d54c63fe63c2afcd0caea5ce709d1a0b213213f
+  AWSEC2: 24806eacad9aa11cdc16dcb653bccedd7a7b9030
+  AWSElasticLoadBalancing: 4df4ced0d718d821311a959c385371ce7b729f07
+  AWSiOSSDKv2: bbbe2aac03d3b1494b2e9b908a7a59c53cc1e121
+  AWSKinesis: 6cb057bf82d0c50f0de3f17880461a6b7faddffc
+  AWSMobileAnalytics: b57240111c0c93b2172bd61db20842755a6b1c7e
+  AWSS3: 2f90735901744687eaeb91621fa62ee921db6510
+  AWSSES: 9e0c08215c6dea9aabc84c5cb41c630518632889
+  AWSSimpleDB: b80bf22d6c98d3455b09abc9c742fa11e1268971
+  AWSSNS: 6844814ce167da813e213a4d3f8f0e6c45ae3bed
+  AWSSQS: c2ba8ed579233f50b9bdf71717a9bee8878dfc82
+  Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
+  BSHelper: 0d5b52ab1786fc3a626f1941edac64b8b45ca8e0
+  CCBottomRefreshControl: 57a596348855260f627ffc2b311328ed15b94877
+  CMDQueryStringSerialization: 4bb0a2f5e7d8d8678d911d88072274952cbef4e5
+  CMPopTipView: 774e0230b5c73abb3c39051da6d8a383373c4f7f
+  DAKeyboardControl: 9d9bca22a5cc3c1d3cc61e24fbd208c3e84a3d2d
+  EKKeyboardAvoiding: 15ed09e96eb97594991665316eef43340936bf74
+  FBAudienceNetwork: d95c0724b61df6e7ffbd5ccb3f77c631551c882e
+  FBSDKCoreKit: 30a21d2d7b92984b3d80497113433c00824c35e9
+  FBSDKLoginKit: 42b7129ac0373ca99eaf4cbebf4d07bd42371f59
+  FBSDKMessengerShareKit: 41c0b1a667d685c9433f993eb9611b3d5074e1cb
+  FBSDKShareKit: 9b573d03fbee36cbaf42d5bb1f2bc019e0d72347
+  FirebaseAnalytics: 6e58fc9b397664369ac7617fb0ba93fab6ba7b5b
+  FirebaseCore: d0ed25f27b6f9158eccc439f1be6f92e81207e28
+  FirebaseInstanceID: ba1e640935235e5fac39dfa816fe7660e72e1a8a
+  Google: 813c467362eabc11385f5a5cc9ad0cb651a58f4e
+  GoogleAnalytics: f42cc53a87a51fe94334821868d9c8481ff47a7b
+  GoogleAPIClient: 4a6b0b807de8b1115a2835180b25dd93dc60f1ea
+  GoogleInterchangeUtilities: d5bc4d88d5b661ab72f9d70c58d02ca8c27ad1f7
+  GoogleMaps: 06589b9a38097bce0cd6e90f0fd9b5e4b4a9344c
+  GooglePlaces: 16e96266483b8010e9f275399403647978523c86
+  GoogleSymbolUtilities: 631ee17048aa5e9ab133470d768ea997a5ef9b96
+  GoogleToolboxForMac: 2b2596cbb7186865e98cadf2b1e262d851c2b168
+  GTMOAuth2: 7fc9c10f5c745f4d9850419ea88889fe3baa6b7d
+  GTMSessionFetcher: a1f8ed39e4fe21c68957daed472c7afbcdf29166
+  InstagramSimpleOAuth: 261df4c8c0e1ff43749c22bf0c6e8b1cdb3eda3d
+  ISO8601: d3ea3ba9b752820cf92c6b47a9ee327e9f0e13fc
+  JSONModel: 216584d0311b053ff714f1d6cb700dbf890847bc
+  MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
+  Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
+  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
+  MSSPopMasonry: 65d944fe99051e797d8a1311b0a62bc6090807fa
+  pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
+  RDVKeyboardAvoiding: 5570e656400e7adfd8cd76cd6748544376899735
+  ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
+  Reveal-iOS-SDK: e2250b3c155bcfac53ae223ddc1f76d08f206c33
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  SimpleAuth: bc7d594f90711a7e6ef7624dce5aa8c8b09770ab
+  SimpleOAuth2: 650ae997858c9d2f97773fc55c76e534ac3747da
+  UITextView+Placeholder: 77680995fcdd07c3f52ec92fe1150874a2ac89ff
+  YYCache: 8105b6638f5e849296c71f331ff83891a4942952
+  YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
+  YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
+
+PODFILE CHECKSUM: c38d8c1f6e495ca6bd1555c85971f5937ee0eda4
+
+COCOAPODS: 1.1.1

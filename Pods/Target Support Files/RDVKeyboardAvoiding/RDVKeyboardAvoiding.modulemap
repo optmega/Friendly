@@ -1,0 +1,6 @@
+framework module RDVKeyboardAvoiding {
+  umbrella header "RDVKeyboardAvoiding-umbrella.h"
+
+  export *
+  module * { export * }
+}

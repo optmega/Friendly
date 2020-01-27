@@ -1,0 +1,6 @@
+framework module BSHelper {
+  umbrella header "BSHelper-umbrella.h"
+
+  export *
+  module * { export * }
+}

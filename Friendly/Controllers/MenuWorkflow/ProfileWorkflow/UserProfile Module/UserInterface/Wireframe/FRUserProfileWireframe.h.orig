@@ -1,0 +1,26 @@
+//
+//  FRUserProfileInteractor.h
+//  Friendly
+//
+//  Created by Sergey Borichev on 28.03.2016.
+//  Copyright (c) 2016 TecSynt. All rights reserved.
+//
+
+@class FRUserModel;
+
+@interface FRUserProfileWireframe : NSObject
+
+- (void)presentUserProfileControllerFromNavigationController:(UINavigationController*)nc userId:(NSString*)userId;
+- (void)dismissUserProfileController;
+
+- (void)presentInputController;
+- (void)presentAlertController:(UIAlertController*)alert;
+- (void)presentInstagramAuthController;
+- (void)presentPreviewControllerWithImage:(UIImage*)image;
+<<<<<<< HEAD
+- (void)presentInviteToEventController:(NSString*)userId;
+=======
+- (void)presentChatWithUser:(FRUserModel*)user;
+>>>>>>> 2e9414415a5f3eda32e0980bbaab665849dbeeac
+
+@end
